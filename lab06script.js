@@ -42,6 +42,11 @@ let icons = "<p id =\"second\"/><img id = \"pic1\"/ src=\"hearticon.png\"/>45<im
 let bubbles = "<div class = \"bubbles\"/>" + yesterday + firstParagraph + icons +"</div>";
 let firstFullContentBoxes = "<div class = \"boxes\"/>" + bubbles + "</div>";
 
+$(document).ready(function(){
+    $(".bubbles").addClass("box1");
+  });
+
+
 //Second Content Box
 
 let twodaysago = "<h3>2 days ago</h3>";

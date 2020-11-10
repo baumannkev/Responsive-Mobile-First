@@ -3,7 +3,6 @@ html{
 }
 
 body {
- 
   color: black;
   font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
   margin: 0;
@@ -19,18 +18,17 @@ body {
   position: relative;
 }
 
-
-
 /* HEADER */
 
 header {
   background-size: 100%;
   background-position: center;
-  min-height: 30vh;
+  min-height: 20vh;
   text-align: center;
 }
 
 header a {
+  text-transform: uppercase;
   margin-top: 0px;
   color: white
 }
@@ -41,22 +39,22 @@ header .mobile {
 
 header .logo a {
   background-image: url("image.jpg");
-  background-size: 100px;
+  background-size: 80px;
   background-repeat: no-repeat;
-  height: 100px;
+  height: 80px;
+  width: 80px;
   display: flex;
   justify-content: center;
   position: relative;
-  top: 100px;
+  top: 50px;
+  right: 10px;
   border: 3px solid white;
   border-radius: 50%;
   box-shadow: gray 0 0 10px;
-  width: 100px;
 }
 
   header .menu{
   position: relative;
-  display: flex;
   background-image: url("menuicon.jpg");
   background-size: 100px;
   background-repeat: no-repeat;
@@ -67,17 +65,13 @@ header .logo a {
 
 header .home{
   position: absolute;
-  text-align: center;
   display: inline-block;
   top: 10px;
 }
 
 header .settings{
-  display: flex;
   position: relative;
   float: right;
-  margin-right: 0;
-
 }
 
 nav ul {
@@ -93,7 +87,7 @@ nav li {
 
 /* RESPONSIVE RULES */
 
-@media screen and (max-width: 300px) {
+@media screen and (max-width: 345px) {
   header {
     height: 250px;
     background-position: 0 -30px;
@@ -106,6 +100,34 @@ nav li {
   }
 }
 
+@media screen and (min-width: 800px) {
+  header {
+    height: 250px;
+    background-position: 0 -30px;
+  }
+  header .mobile {
+    display: none;
+  }
+  header .desktop {
+    display: none;
+  }
+
+  header .home{
+    float: right;
+    position: relative;
+  }
+  header .logo a{
+    height: 150px;
+    width: 150px;
+    background-size: 150px;
+    left: 10px;
+  }
+
+  header .settings{
+    position: relative;
+  }
+}
+
 /* CONTENT */
 
 .content {
@@ -113,13 +135,16 @@ nav li {
   display: contents;
   text-align: center;
   position: sticky;
+  margin-block-start: 10px;
+  margin-block-end: 10px;
 }
 
 .content .name{
-  
   display: flex;
   justify-content: center;
   font-weight: bold;
+  margin-block-start: 1px;
+  margin-block-end: 10px;
 }
 
 .content .message{
@@ -138,19 +163,18 @@ nav li {
 
   .follow{
     font-weight: 800;
-    background-color: #12C4ED;
+    background-color: yellow;
     width: 100px;
     padding: 10px;
     border-radius: 6px;
-   
   }
 
   .boxes{
     display: flex;
     justify-content: center;
     margin-block-end: 10px;
-
   }
+
   .bubbles{
     background-color: white;
     width: 300px;
@@ -169,7 +193,23 @@ nav li {
     margin: 5px;
     height: 50px;
     width: 50px;
-    
+ 
+  }
+
+  /*Display Boxes Responsive*/
+  @media screen and (min-width: 800px) {
+     .boxes{ 
+      display: relative;
+      justify-content: right;
+      margin-block-end: 10px;
+      margin-inline-end: 10px;
+    }
+    .box1{
+      display: relative;
+      justify-content: right;
+      margin-block-end: 10px;
+      margin-inline-end: 10px;
+    }
   }
 
 /* FOOTER */
@@ -181,3 +221,4 @@ footer {
   padding: 20px 20px;
   text-align: center;
 }
+
